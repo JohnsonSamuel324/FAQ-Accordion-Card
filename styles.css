@@ -8,8 +8,16 @@
     display: none;
 }
 
-.card-img-container * {
+#card-img-main, #card-img-shadow {
+    width: 75%;
     position: absolute;
+    top: -1.25rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#card-img-shadow {
+    top: 3rem;
 }
 
 body {
@@ -32,6 +40,7 @@ p {
 }
 
 .faq-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,6 +49,7 @@ p {
     width: 90%;
     background-color: #ffffff;
     border-radius: 24px;
+    margin-top: 4rem;
 }
 
 #card-title {
@@ -102,4 +112,11 @@ hr {
 }
 .attribution a { 
     color: hsl(96, 89%, 75%); 
+}
+
+/* Stops elements going off-screen when on 375px screen */
+@media (min-width: 390px) {
+    .faq-card {
+        margin-top: 0;
+    }
 }
