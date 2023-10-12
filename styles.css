@@ -221,4 +221,10 @@ hr {
     #card-img-pattern {
         top: -4.5rem;
     }
+    .accordion .container {
+        max-width: 65%;
+    }
+    hr {
+        width: 70%;
+    }
 }
