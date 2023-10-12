@@ -198,17 +198,17 @@ hr {
     }
     .accordion .container {
         margin: 0;
-        margin-right: 6rem;
+        margin-right: 4rem;
     }
     hr {
         margin: 1rem 0;
-        margin-right: 5rem;
+        margin-right: 3rem;
     }
 }
 
 @media (min-width: 1440px) {
     .faq-card {
-        width: 50%;
+        width: 60%;
     }
     /* #card-img-main-d {
         left: 30%;
