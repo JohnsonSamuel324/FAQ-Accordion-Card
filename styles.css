@@ -198,11 +198,11 @@ hr {
     }
     .accordion .container {
         margin: 0;
-        margin-right: 4rem;
+        max-width: 75%;
     }
     hr {
         margin: 1rem 0;
-        margin-right: 3rem;
+        width: 80%;
     }
 }
 
@@ -215,8 +215,8 @@ hr {
         width: 75%;
     } */
     #card-img-box {
-        left: 25.5%;
-        top: 55.5%;
+        left: 20.5%;
+        top: 55%;
     }
     #card-img-pattern {
         top: -4.5rem;
