@@ -4,11 +4,15 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
-#card-img-box {
+#card-img-box, #card-img-pattern {
     display: none;
 }
 
-#card-img-main, #card-img-shadow {
+#card-img-main-d {
+    display: none;
+}
+
+#card-img-main-m, #card-img-shadow {
     width: 75%;
     position: absolute;
     top: -1.25rem;
@@ -25,6 +29,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     height: 100vh;
     background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
@@ -52,8 +57,16 @@ p {
     margin-top: 4rem;
 }
 
+.faq-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
 #card-title {
-    margin-top: 8rem;
+    margin-top: 7rem;
 }
 
 .accordion .container {
@@ -118,5 +131,94 @@ hr {
 @media (min-width: 390px) {
     .faq-card {
         margin-top: 0;
+    }
+}
+/* Fixes view for tablets */
+@media (min-width: 768px) {
+    .faq-card {
+        width: 50%;
+    }
+}
+
+/* Fixes view for tablets */
+@media (min-width: 1024px) {
+    .faq-card {
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        overflow: hidden;
+    }
+    .img-container {
+        position: relative;
+    }
+    #card-img-main-m {
+        display: none;
+        /* position: relative;
+        display: block;
+        width: 100%;
+        top: auto;
+        left: auto;
+        transform: none; */
+    }
+    #card-img-main-d {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+    }
+    #card-img-box {
+        display: block;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        left: 12.5%;
+        top: 54.5%;
+    }
+    #card-img-shadow {
+        display: none;
+    }
+    #card-img-pattern {
+        display: block;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: -15%;
+        top: -3rem;
+        width: 200%;
+    }
+    .faq-info {
+        align-items: flex-start;
+    }
+    #card-title {
+        margin-top: 4rem;
+    }
+    .accordion {
+        margin-bottom: 4rem;
+    }
+    .accordion .container {
+        margin: 0;
+        margin-right: 6rem;
+    }
+    hr {
+        margin: 1rem 0;
+        margin-right: 5rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .faq-card {
+        width: 50%;
+    }
+    /* #card-img-main-d {
+        left: 30%;
+        width: 75%;
+    } */
+    #card-img-box {
+        left: 25.5%;
+        top: 55.5%;
+    }
+    #card-img-pattern {
+        top: -4.5rem;
     }
 }
